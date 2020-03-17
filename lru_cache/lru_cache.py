@@ -47,7 +47,7 @@ class LRUCache:
             node = self.storage[key]
             node.value = (key,value)
             self.order.move_to_front(node)
-            return
+            return 
 
         if self.size == self.limit:
             del self.storage[self.order.tail.value[0]]
@@ -57,7 +57,7 @@ class LRUCache:
         # add the node to storage
         self.order.add_to_head((key,value))
         self.storage[key] = self.order.head
-        self.size -= 1
+        self.size += 1
 
 
 x = LRUCache()
