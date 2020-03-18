@@ -109,12 +109,6 @@ class DoublyLinkedList:
             return value
 
     def move_to_front(self, node):
-        # if node is self.head:
-        #     return
-        # value = node.value
-        # self.delete(node)
-        # self.add_to_head(value)
-
         if node is self.head:
             return
 
@@ -127,11 +121,6 @@ class DoublyLinkedList:
         self.add_to_head(node_value)
 
     def move_to_end(self, node):
-        # if node is self.tail:
-        #     return 
-        # value = node.value
-        # self.delete(node)
-        # self.add_to_tail(value)
         if node is self.tail:
             return
         node_value = node.value
